@@ -3,11 +3,11 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from plugins.admemes.list import list
 
-@Client.on_message(filters.command(["tr"]))
+@Client.on_message(filters.command(["translate"]))
 async def left(client,message):
 	if (message.reply_to_message):
 		try:
-			lgcd = message.text.split("/tr")
+			lgcd = message.text.split("/translate")
 			lg_cd = lgcd[1].lower().replace(" ", "")
 			tr_text = message.reply_to_message.text
 			translator = Translator()
@@ -16,7 +16,7 @@ async def left(client,message):
                                 [
                                     [
                                         InlineKeyboardButton(
-                                            text=f"𝘔𝘰𝘳𝘦 𝘓𝘢𝘯𝘨 𝘊𝘰𝘥𝘦𝘴", url="https://cloud.google.com/translate/docs/languages"
+                                            text=f"𝘔𝘰𝘳𝘦 𝘓𝘢𝘯𝘨 𝘊𝘰𝘥𝘦𝘴", url="https://telegra.ph/Google-Translating-Languages-05-25"
                                         )
                                     ],
 				    [
@@ -32,9 +32,9 @@ async def left(client,message):
 						fromt = i
 					if list[i] == translation.dest:
 						to = i 
-				await message.reply_text(f"translated from {fromt.capitalize()} to {to.capitalize()}\n\n```{translation.text}```", reply_markup=hehek, quote=True)
+				await message.reply_text(f"translated from {fromt.capitalize()} to {to.capitalize()}\n\n```{translation.text}``` by translated @MutyalaHarshith", reply_markup=hehek, quote=True)
 			except:
-			   	await message.reply_text(f"Translated from **{translation.src}** To **{translation.dest}**\n\n```{translation.text}```", reply_markup=hehek, quote=True)
+			   	await message.reply_text(f"Translated from **{translation.src}** To **{translation.dest}**\n\n```{translation.text}``` by translated @MutyalaHarshith", reply_markup=hehek, quote=True)
 			
 
 		except :
