@@ -8,7 +8,7 @@ from pyrogram.types import User, Message, Document
 from gtts import gTTS
 from info import DOWNLOAD_LOCATION
   
-Thanks = """ Thats The End Of Your Audio Book, And Thanks for Using this Service"""
+Thanks = """ Thats The End Of Your Audio Book, And Thanks for Using this Service @MutyalaHarshith"""
 
 @Client.on_message(filters.command(["audiobook"])) # PdfToText 
 async def pdf_to_text(bot, message):
@@ -34,8 +34,8 @@ async def pdf_to_text(bot, message):
                 await txt.edit(f"Creating Your Audio Book...\n Please Don't Do Anything")
                 output_text = page_content + Thanks
               # Change Voice by editing the Language
-                language = 'en-in'  # 'en': ['en-us', 'en-ca', 'en-uk', 'en-gb', 'en-au', 'en-gh', 'en-in',
-                                    # 'en-ie', 'en-nz', 'en-ng', 'en-ph', 'en-za', 'en-tz'],
+                language = 'en-in'  # 'en': ['en-us', 'en-ca', 'en-uk', 'en-gb', 'en-au', 'en-kn', 'en-te',
+                                    # 'en-ie', 'en-nz', 'en-ng', 'en-ph', 'en-ta', 'en-ml'],
                 tts_file = gTTS(text=output_text, lang=language, slow=False) 
                 tts_file.save(f"{message.chat.id}.mp3")      
                 with open(f"{message.chat.id}.mp3", "rb") as speech:
