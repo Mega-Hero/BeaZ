@@ -60,7 +60,7 @@ async def showid(client, message):
 @Client.on_message(filters.command("about"))
 async def aboutme(client, message):
         buttons= [[
-            InlineKeyboardButton('📢 UPDATES CHANNEL 📢', url='https://t.me/mkn_bots_updates')
+            InlineKeyboardButton('💞 UPDATES CHANNEL', url='https://t.me/MutyalaHarshith')
             ],[
             InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
@@ -92,15 +92,15 @@ async def who_is(client, message):
     if from_user is None:
         return await status_message.edit("no valid user_id / message specified")
     message_out_str = ""
-    message_out_str += f"<b>➾ First Name:</b> {from_user.first_name}\n"
+    message_out_str += f"<b>💞 First Name:</b> {from_user.first_name}\n"
     last_name = from_user.last_name or "<b>None</b>"
-    message_out_str += f"<b>➾ Last Name:</b> {last_name}\n"
-    message_out_str += f"<b>➾ Telegram ID:</b> <code>{from_user.id}</code>\n"
+    message_out_str += f"<b>✨ Last Name:</b> {last_name}\n"
+    message_out_str += f"<b>🤩 Telegram ID:</b> <code>{from_user.id}</code>\n"
     username = from_user.username or "<b>None</b>"
     dc_id = from_user.dc_id or "[User Doesnt Have A Valid DP]"
-    message_out_str += f"<b>➾ Data Centre:</b> <code>{dc_id}</code>\n"
-    message_out_str += f"<b>➾ User Name:</b> @{username}\n"
-    message_out_str += f"<b>➾ User 𝖫𝗂𝗇𝗄:</b> <a href='tg://user?id={from_user.id}'><b>Click Here</b></a>\n"
+    message_out_str += f"<b>💖 Data Centre:</b> <code>{dc_id}</code>\n"
+    message_out_str += f"<b>🥰 User Name:</b> @{username}\n"
+    message_out_str += f"<b>😜 User 𝖫𝗂𝗇𝗄:</b> <a href='tg://user?id={from_user.id}'><b>MH Link</b></a>\n"
     if message.chat.type in (("supergroup", "channel")):
         try:
             chat_member_p = await message.chat.get_member(from_user.id)
