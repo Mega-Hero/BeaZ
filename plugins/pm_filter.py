@@ -757,13 +757,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer("🤨 Curiosity is a little more, isn't it? 😁")
     elif query.data == "start":                        
         buttons = [[
-            InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            InlineKeyboardButton("💞 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("💕 𝚄𝙿𝙳𝙰𝚃𝙴𝚂", url="https://t.me/MutyalaHarshith")
             ],[      
-            InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿 ℹ️", callback_data="help"),
-            InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
+            InlineKeyboardButton("💡 𝙷𝙴𝙻𝙿", callback_data="help"),
+            InlineKeyboardButton("✨ 𝙰𝙱𝙾𝚄𝚃", callback_data="about")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -828,13 +828,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="▣ ▢ ▢"
+            text="Mutyala"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▢"
+            text="Harshith"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▣"
+            text="Mutyala Harshith"
         )       
         await query.message.edit_text(                     
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -868,13 +868,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)       
         await query.message.edit_text(
-            text="▣ ▢ ▢"
+            text="Mutyala"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▢"
+            text="Harshith"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▣"
+            text="Mutyala Harshith"
         )
         await query.message.edit_text(                     
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -890,13 +890,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text="▣ ▢ ▢"
+            text="Mutyala"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▢"
+            text="Harshith"
         )
         await query.message.edit_text(
-            text="▣ ▣ ▣"
+            text="Mutyala Harshith"
         ) 
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
@@ -905,7 +905,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('SOURCE CODE', url='https://github.com/MrMKN/PROFESSOR-BOT')
+            InlineKeyboardButton('JoiN', url='https://t.me/MutyalaHarshith')
             ],[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
         ]]
@@ -1135,7 +1135,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "gtrans":
         buttons = [[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='mkn'),
-            InlineKeyboardButton('𝙻𝙰𝙽𝙶 𝙲𝙾𝙳𝙴𝚂', url='https://cloud.google.com/translate/docs/languages')
+            InlineKeyboardButton('𝙻𝙰𝙽𝙶 𝙲𝙾𝙳𝙴𝚂', url='https://telegra.ph/Google-Translating-Languages-05-25')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1146,7 +1146,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "carb":
         R1 = await query.message.reply_photo(
-                 photo="https://telegra.ph/file/2e2a07e86066538ed7406.jpg",
+                 photo="https://telegra.ph/file/236794ce4bb2213eaae1e.jpg",
                  caption=script.CARB_TXT,
                  parse_mode='html'
         )
